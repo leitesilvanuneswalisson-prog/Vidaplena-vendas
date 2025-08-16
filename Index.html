@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidaPlena - Liberte-se das Dietas e Transforme sua Relação com a Comida</title>
+    <meta name="description" content="Descubra como se alimentar sem culpa, alcançar seu peso natural e desenvolver uma relação saudável com a comida através da Nutrição Intuitiva.">
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI'); // Substitua pelo seu Pixel ID
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+        
+        .urgency-banner {
+            background: #e74c3c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .pain-points {
+            background: #fff5f5;
+            border-left: 5px solid #e74c3c;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .pain-points h2 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .pain-list {
+            list-style: none;
+        }
+        
+        .pain-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ffeaea;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .pain-list li:before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+        }
+        
+        .solution {
+            background: #f0fff4;
+            border-left: 5px solid #27ae60;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .solution h2 {
+            color: #27ae60;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .benefits {
+            list-style: none;
+        }
+        
+        .benefits li {
+            padding: 10px 0;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .benefits li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        .testimonial {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 5px solid #3498db;
+            font-style: italic;
+        }
+        
+        .price-section {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 15px;
+        }
+        
+        .price-original {
+            font-size: 1.2em;
+            text-decoration: line-through;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        .price-current {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .price-installments {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        
+        .guarantee {
+            background: #fff9c4;
+            border: 2px solid #f1c40f;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .guarantee h3 {
+            color: #f39c12;
+            margin-bottom: 15px;
+        }
+        
+        .bonus-section {
+            background: #e8f4fd;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .bonus-item {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .scarcity {
+            background: #2c3e50;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .social-proof {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .counter {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .price-current {
+                font-size: 2.5em;
+            }
+            
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="urgency-banner">
+            🔥 OFERTA ESPECIAL: Apenas nas próximas <span id="countdown">23:59:59</span> 🔥
+        </div>
+        
+        <header class="header">
+            <h1>VidaPlena</h1>
+            <div class="subtitle">O Método Completo para Se Libertar das Dietas e Transformar Sua Relação com a Comida Para Sempre</div>
+            <p>✨ Baseado na Revolucionária Nutrição Intuitiva ✨</p>
+        </header>
+        
+        <div class="content">
+            <div class="pain-points">
+                <h2>Você Está Cansada(o) de...</h2>
+                <ul class="pain-list">
+                    <li>Fazer dieta após dieta sem resultados duradouros?</li>
+                    <li>Sentir culpa toda vez que come algo "proibido"?</li>
+                    <li>Viver obcecada(o) pensando em comida o dia todo?</li>
+                    <li>Passar fome e depois perder o controle completamente?</li>
+                    <li>Ver seu peso fazer um efeito sanfona constante?</li>
+                    <li>Evitar eventos sociais por causa da comida?</li>
+                    <li>Se sentir fracassada(o) toda segunda-feira?</li>
+                    <li>Ter uma relação de amor e ódio com a comida?</li>
+                </ul>
+            </div>
+            
+            <div class="solution">
+                <h2>Imagine Se Você Pudesse...</h2>
+                <ul class="benefits">
+                    <li>Comer sem culpa e ainda assim manter um peso saudável</li>
+                    <li>Confiar completamente nos sinais do seu corpo</li>
+                    <li>Parar de pensar obsessivamente em comida</li>
+                    <li>Ir a restaurantes e eventos sem ansiedade</li>
+                    <li>Ter energia estável durante todo o dia</li>
+                    <li>Descobrir quais alimentos realmente te satisfazem</li>
+                    <li>Acabar com o ciclo de restrição-compulsão para sempre</li>
+                    <li>Desenvolver uma relação pacífica com seu corpo</li>
+                </ul>
+            </div>
+            
+            <h2 style="text-align: center; color: #2c3e50; margin: 40px 0;">ISSO É POSSÍVEL COM O VIDAPLENA!</h2>
+            
+            <div class="testimonial">
+                <p>"Depois de 15 anos fazendo dieta, finalmente encontrei a liberdade! Perdi 12kg sem me privar de nada e, pela primeira vez na vida, não tenho medo de ganhar peso de volta. O VidaPlena mudou minha vida!" - Maria, 34 anos</p>
+            </div>
+            
+            <h2 style="text-align: center; color: #2c3e50; margin: 30px 0;">O Que Você Vai Receber:</h2>
+            
+            <div class="bonus-section">
+                <h3 style="color: #2980b9; text-align: center; margin-bottom: 20px;">🎁 PACOTE COMPLETO VIDAPLENA 🎁</h3>
+                
+                <div class="bonus-item">
+                    <h4>📘 Guia Completo da Nutrição Intuitiva (Valor: R$ 97)</h4>
+                    <p>8 capítulos detalhados com os 10 princípios fundamentais, exercícios práticos e tudo que você precisa para se libertar das dietas para sempre.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h4>🍳 +50 Receitas Intuitivas (Valor: R$ 47)</h4>
+                    <p>Receitas flexíveis e deliciosas para cada refeição do dia, todas baseadas nos princípios da alimentação intuitiva.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h4>📋 Plano de 7 Dias para Começar (Valor: R$ 67)</h4>
+                    <p>Um roadmap passo-a-passo para implementar a nutrição intuitiva na sua vida de forma gradual e sustentável.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h4>🧘 Kit de Ferramentas Emocionais (Valor: R$ 37)</h4>
+                    <p>Estratégias comprovadas para lidar com emoções sem usar comida como válvula de escape.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <h4>📱 Acesso ao Grupo VIP no Telegram (Valor: R$ 97)</h4>
+                    <p>Comunidade exclusiva com suporte diário, dicas extras e troca de experiências com outras pessoas na mesma jornada.</p>
+                </div>
+            </div>
+            
+            <div class="price-section">
+                <h3>🔥 OFERTA ESPECIAL POR TEMPO LIMITADO! 🔥</h3>
+                <div class="price-original">De R$ 345,00 por</div>
+                <div class="price-current">R$ 47</div>
+                <div class="price-installments">ou 12x de R$ 4,58 no cartão</div>
+                <p style="margin: 20px 0;">💥 DESCONTO DE MAIS DE 85%! 💥</p>
+                <a href="#" class="cta-button" onclick="trackPurchase()">QUERO TRANSFORMAR MINHA VIDA AGORA!</a>
+            </div>
+            
+            <div class="guarantee">
+                <h3>🛡️ GARANTIA INCONDICIONAL DE 30 DIAS</h3>
+                <p>Se por qualquer motivo você não ficar 100% satisfeita(o) com o VidaPlena, devolvemos seu dinheiro integralmente. Sem perguntas, sem complicações.</p>
+            </div>
+            
+            <div class="scarcity">
+                ⚠️ ATENÇÃO: Esta oferta especial é limitada e pode sair do ar a qualquer momento!
+                <br>
+                Apenas <span class="counter" id="spots">47</span> vagas restantes!
+            </div>
+            
+            <div class="social-proof">
+                <h3 style="color: #2c3e50;">Mais de 2.847 pessoas já transformaram suas vidas!</h3>
+                <p>⭐⭐⭐⭐⭐ (4.9/5 - Baseado em 1.230 avaliações)</p>
+            </div>
+            
+            <div class="testimonial">
+                <p>"Achei que nunca conseguiria parar de fazer dieta, mas o VidaPlena me mostrou um caminho diferente. Hoje como de tudo, peso 8kg menos que quando comecei a última dieta e me sinto em paz comigo mesma." - Ana Carolina, 28 anos</p>
+            </div>
+            
+            <h2 style="text-align: center; color: #e74c3c; margin: 40px 0;">⏰ NÃO PERCA ESTA OPORTUNIDADE ÚNICA!</h2>
+            
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="#" class="cta-button" onclick="trackPurchase()">SIM! QUERO O VIDAPLENA AGORA!</a>
+                <p style="margin-top: 20px; color: #666;">🔒 Compra 100% Segura | 💳 Parcelamos em até 12x</p>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>© 2024 VidaPlena. Todos os direitos reservados.</p>
+            <p>contato@vidaplena.com.br | www.vidaplena.com.br</p>
+        </footer>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const tomorrow = new Date();
+            tomorrow.setHours(23, 59, 59, 999);
+            const timeLeft = tomorrow.getTime() - now;
+            
+            const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').innerHTML = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Spots Counter
+        let spots = 47;
+        setInterval(() => {
+            if (spots > 5 && Math.random() > 0.7) {
+                spots--;
+                document.getElementById('spots').textContent = spots;
+            }
+        }, 30000);
+        
+        // Facebook Pixel Events
+        function trackPurchase() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout', {
+                    value: 47.00,
+                    currency: 'BRL'
+                });
+            }
+            
+            // Aqui você redirecionaria para sua página de checkout
+            alert('Redirecionando para o checkout...');
+            // window.location.href = 'https://sua-pagina-de-checkout.com';
+        }
+        
+        // Track scroll depth
+        let scrollTracked = {25: false, 50: false, 75: false, 100: false};
+        
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            
+            Object.keys(scrollTracked).forEach(percent => {
+                if (scrollPercent >= percent && !scrollTracked[percent]) {
+                    scrollTracked[percent] = true;
+                    if (typeof fbq !== 'undefined') {
+                        fbq('trackCustom', `Scroll${percent}`);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
